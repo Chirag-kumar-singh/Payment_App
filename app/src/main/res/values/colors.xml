@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="phonepe">#5F259F</color>
+
+    <color name="btn_color">#FF735C</color>
+    <color name="edit_text_color">#C9A1F6</color>
+    <color name="hint_text_color">#D4D4D4</color>
+
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#522F92</color>
+    <color name="colorAccent">#02C9B5</color>
+
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_200">#EEEEEE</color>
+</resources>

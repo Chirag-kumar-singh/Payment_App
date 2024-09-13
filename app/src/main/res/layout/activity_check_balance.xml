@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Activity.CheckBalanceActivity"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    >
+
+    <!-- Main content -->
+
+    <!-- Tick GIF Image -->
+    <ImageView
+        android:id="@+id/tickGif"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/payment"
+        android:layout_alignParentTop="true"
+        android:contentDescription="Tick GIF" />
+
+    <!-- Success Message -->
+    <TextView
+        android:id="@+id/successMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tickGif"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Bank account balance fetched\nsuccessfully"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <!-- Bank Account Name -->
+    <TextView
+        android:id="@+id/bankAccountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/successMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Bank Account Name"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Available Balance Label -->
+    <TextView
+        android:id="@+id/availableBalanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bankAccountName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Available Balance"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!-- Amount -->
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/availableBalanceLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="₹0.00"
+        android:textSize="26sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <!-- Done Text -->
+    <TextView
+        android:id="@+id/doneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:text="DONE"
+        android:textSize="26sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <!-- Loader Overlay -->
+    <FrameLayout
+        android:id="@+id/loaderOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#80000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+    <!-- Loader (ProgressBar) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/loaderView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminateDrawable="@drawable/custom_progress_drawable"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Please Wait Text -->
+        <TextView
+            android:id="@+id/pleaseWaitText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Please Wait..."
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</FrameLayout>
+
+    </RelativeLayout>
